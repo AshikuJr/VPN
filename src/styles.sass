@@ -7,7 +7,30 @@
   box-sizing: border-box
   margin: 0
 
+a
+  text-decoration: none
+  color: $text
+
+button
+  border: none
+  background-color: transparent
+  &:active
+    outline: none
+  &:focus
+    outline: none
+
 body
   font-family: 'Light'
-  color: white
-  background-color: black
+  background-color: white
+  color: $text
+  line-height: 1.2
+
+.container
+  margin: 0 auto
+  max-width: 1140px
+  +l
+    max-width: 860px
+  +m
+    max-width: 580px
+  +s
+    max-width: 95%

@@ -1,0 +1,35 @@
+@import 'src/settings/vars'
+@import 'src/settings/mixins'
+
+.navbar
+  margin-top: 40px
+  display: flex
+  align-items: center
+  justify-content: space-between
+  min-height: 45px
+  &__logo
+    width: 36px
+    height: 36px
+  &__brand
+    margin-left: 10px
+    margin-right: 150px
+    font-family: 'Regular'
+    font-size: 20px
+  &__link
+    margin-left: 36px
+    font-size: 1em
+  &__signIn
+    margin-left: 150px
+    font-family: 'Regular'
+  &__signUp
+    margin-left: 30px
+    font-family: 'Regular'
+    color: $primary-red
+    width: 150px
+    height: 45px
+    border: 1px solid $primary-red
+    border-radius: 50px
+    &:hover
+      transition: 0.5s
+      background-color: $primary-red
+      color: white
