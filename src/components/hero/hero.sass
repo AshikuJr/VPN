@@ -1,0 +1,35 @@
+@import 'src/settings/vars'
+@import 'src/settings/mixins'
+
+.hero
+  margin-top: 90px
+  display: grid
+  grid-template-columns: 1fr 1fr
+  grid-column-gap: 40px
+  grid-template-rows: 2fr 1fr 1fr
+  grid-template-areas: "ht hp" "hs hp" "hb hp"
+  &__title
+    grid-area: ht
+    font-family: 'Regular'
+    font-size: 50px
+    line-height: 1.4
+    color: black
+  &__subtitle
+    grid-area: hs
+    line-height: 2
+  &__button
+    grid-area: hb
+    width: 250px
+    height: 60px
+    border-radius: 10px
+    background-color: $primary-red
+    color: white
+    font-family: 'Regular'
+    align-self: start
+    transition: box-shadow 0.2s
+    &:hover
+      box-shadow: 0px 5px 60px 0px $primary-red
+  &__pic
+    grid-area: hp
+    width: 600px
+    height: 400px

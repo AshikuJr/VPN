@@ -4,7 +4,7 @@ import logo from './logo.svg';
 
 const Navbar__link = props => {
   return <a href={props.src} className="navbar__link">{props.text}</a>
-}
+};
 
 const Navbar = props => {
   return <header className="navbar">
