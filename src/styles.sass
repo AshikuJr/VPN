@@ -6,6 +6,8 @@
 *
   box-sizing: border-box
   margin: 0
+  scroll-behavior: smooth
+  scroll-margin-top: 70px
 
 a
   text-decoration: none
@@ -35,8 +37,21 @@ h2
 h3
   font-family: 'Regular'
   color: black
+  font-size: 25px
+  line-height: 30px
+
+h4
+  font-family: 'Regular'
+  color: black
   font-size: 18px
   line-height: 30px
 
+.nav
+  position: fixed
+  width: 100vw
+  top: 0
+  transition: background-color 0.3s, opacity 0.2s
 .first
   background-color: white
+.second
+  background-color: $background-light

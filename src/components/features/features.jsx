@@ -12,7 +12,7 @@ const ListItem = ({text}) => {
 };
 
 const Features = props => {
-  return <div className="features">
+  return <div className="features" id='features'>
     <img src={pic} alt="another fancy guy" className="features__pic"/>
     <div className="features__description">
       <h2 className="features__title">We Provide Many Features You Can Use</h2>

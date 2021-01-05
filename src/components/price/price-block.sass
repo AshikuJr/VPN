@@ -1,0 +1,44 @@
+@import 'src/settings/vars'
+@import 'src/settings/mixins'
+
+.feature
+  text-align: left
+  margin-top: 20px
+  img
+    height: 9px
+    width: 13px
+    margin-right: 25px
+.price-block
+  width: 300px
+  height: 740px
+  border-radius: 10px
+  border: 2px solid #DDDDDD
+  background-color: white
+  transition: border-color 0.2s
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  align-items: center
+  padding-top: 40px
+  padding-bottom: 50px
+  &:hover
+    border-color: $primary-red
+  &__title
+    margin-top: 20px
+  &__price
+    margin-top: 40px
+    justify-self: end
+  &__button
+    font-family: 'Regular'
+    width: 160px
+    min-height: 45px
+    border-radius: 50px
+    border: 2px solid $primary-red
+    color: $primary-red
+    transition: color 0.2s, background-color 0.2s, box-shadow 0.2s
+    &:hover
+      color: white
+      background-color: $primary-red
+    &:focus
+      color: white
+      background-color: $primary-red
