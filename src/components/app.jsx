@@ -9,6 +9,8 @@ import Stats from './stats/stats.jsx';
 import Features from './features/features.jsx';
 
 import Price from './price/price.jsx';
+import Network from './network/network.jsx';
+import Testimonials from './testimonials/testimonials.jsx'
 
 const App = () => {
   return <div className="app">
@@ -22,6 +24,8 @@ const App = () => {
     </main>
     <section className="second">
       <Container content={<Price/>}/>
+      <Container content={<Network/>}/>
+      <Container content={<Testimonials/>}/>
     </section>
   </div>
 };
