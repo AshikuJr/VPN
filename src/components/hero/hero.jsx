@@ -1,6 +1,6 @@
 import React from 'react';
 import './hero.sass';
-import pic from './pic.svg';
+import pic from './hero-pic.svg';
 
 const Hero = props => {
   return <div className="hero">
