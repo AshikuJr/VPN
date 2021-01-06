@@ -1,0 +1,32 @@
+@import 'src/settings/vars'
+@import 'src/settings/mixins'
+
+.subscribe
+  position: relative
+  bottom: -120px
+  height: 240px
+  border-radius: 10px
+  background-color: white
+  box-shadow: 0px 0px 60px 30px rgba(black, 0.03)
+  display: grid
+  grid-template-areas: 'st sb' 'ss sb'
+  grid-row-gap: 20px
+  padding: 60px 100px
+  &__title
+    grid-area: st
+    width: 360px
+  &__subtitle
+    grid-area: ss
+  &__button
+    grid-area: sb
+    width: 250px
+    height: 60px
+    border-radius: 10px
+    background-color: $primary-red
+    color: white
+    font-family: 'Regular'
+    align-self: center
+    justify-self: end
+    transition: box-shadow 0.2s
+    &:hover
+      box-shadow: 0px 5px 60px 0px $primary-red

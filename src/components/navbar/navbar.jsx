@@ -15,6 +15,9 @@ function bgChange(){
 const Navbar = props => {
   useEffect(() => {
     document.addEventListener('scroll', bgChange);
+    return () => {
+      document.removeEventListener('scroll', bgChange);
+    }
   });
 
   return <nav className="navbar">

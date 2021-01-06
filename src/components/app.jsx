@@ -10,7 +10,10 @@ import Features from './features/features.jsx';
 
 import Price from './price/price.jsx';
 import Network from './network/network.jsx';
-import Testimonials from './testimonials/testimonials.jsx'
+import Testimonials from './testimonials/testimonials.jsx';
+
+import Subscribe from './subscribe/subscribe.jsx';
+import Footer from './footer/footer.jsx';
 
 const App = () => {
   return <div className="app">
@@ -26,6 +29,10 @@ const App = () => {
       <Container content={<Price/>}/>
       <Container content={<Network/>}/>
       <Container content={<Testimonials/>}/>
+      <Container content={<Subscribe/>}/>
+    </section>
+    <section className="third">
+      <Container content={<Footer/>}/>
     </section>
   </div>
 };

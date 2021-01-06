@@ -4,7 +4,7 @@ import './comment.sass';
 import star from './star.svg'
 
 const Comment = props => {
-  return <div className="comment">
+  return <div className={props.active === false ? 'comment' : 'comment comment_active'}>
     <div className="comment__header">
       <img src={props.avatar} alt="avatar" className="comment__avatar"/>
       <div>
