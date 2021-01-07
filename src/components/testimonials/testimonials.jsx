@@ -37,8 +37,8 @@ const Testimonials = props => {
         <button className={current === 3 ? "testimonials__marker testimonials__marker_active" : "testimonials__marker"} onClick = {() => setCurrent(3)}></button>
       </div>
       <div>
-        <button className="testimonials__arrow" onClick = {decreaseCurrent}>🡠</button>
-        <button className="testimonials__arrow" onClick = {increaseCurrent}>🡢</button>
+        <button className="testimonials__arrow" onClick = {decreaseCurrent}>←</button>
+        <button className="testimonials__arrow" onClick = {increaseCurrent}>→</button>
       </div>
     </div>
       }/>
