@@ -12,6 +12,11 @@ function bgChange(){
   nav.style.backgroundColor = window.scrollY < 70 ? 'transparent' : '#FFECEC';
 };
 
+function toggleHamburger(event){
+  let hamburger = event.target.closest('button');
+  hamburger.classList.toggle('navbar__hamburger_active');
+}
+
 const Navbar = props => {
   useEffect(() => {
     document.addEventListener('scroll', bgChange);
@@ -30,11 +35,14 @@ const Navbar = props => {
     <Navbar__link text="Help" src="#footer"/>
     <a href="#" className="navbar__signIn">Sign In</a>
     <button className="navbar__signUp">Sign Up</button>
-    <button className="navbar__hamburger">
+    <button className="navbar__hamburger" onClick = {toggleHamburger}>
       <span></span>
       <span></span>
       <span></span>
     </button>
+    <div className="navbar__dropdown">
+      
+    </div>
   </nav>
 };
 
