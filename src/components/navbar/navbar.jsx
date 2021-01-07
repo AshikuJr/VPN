@@ -21,8 +21,8 @@ const Navbar = props => {
   });
 
   return <nav className="navbar">
-    <img src={logo} alt="logo" className="navbar__logo"/>
-    <a href="#" className="navbar__brand">Lasles <span style={{fontFamily: 'Bold'}}>VPN</span></a>
+    
+    <a href="#" className="navbar__brand"><img src={logo} alt="logo" className="navbar__logo"/> Lasles <span style={{fontFamily: 'Bold'}}>VPN</span></a>
     <Navbar__link text="Features" src="#features"/>
     <Navbar__link text="Pricing" src="#price"/>
     <Navbar__link text="Network" src="#network"/>
@@ -30,6 +30,11 @@ const Navbar = props => {
     <Navbar__link text="Help" src="#footer"/>
     <a href="#" className="navbar__signIn">Sign In</a>
     <button className="navbar__signUp">Sign Up</button>
+    <button className="navbar__hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </nav>
 };
 

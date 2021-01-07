@@ -2,20 +2,46 @@
 @import 'src/settings/mixins'
 
 .testimonials
-  padding-top: 100px
+  z-index: 100
+  position: relative
   text-align: center
+  display: flex
+  flex-direction: column
+  overflow: hidden
+  +m
+    margin-bottom: -100px
+  .container
+    width: 100%
   &__title
+    +m
+      font-size: 40px
+    +s
+      font-size: 30px
   &__subtitle
     margin-top: 30px
+    +s
+      display: none
   &__comments
-    margin-top: 60px
+    min-width: 90vw
+    max-width: 90vw
+    position: absolute
+    top: 150px
     display: flex
-    justify-content: space-between
+    align-self: center
+    justify-content: center
+    transition: left 0.4s
+    +m
+      top: 230px
+    +s
+      top: 200px
+      padding-left: 80px
   &__controls
-    margin-top: 40px
+    margin-top: 340px
     display: flex
-    justify-content: space-between
     align-items: center
+    justify-content: space-between
+    +s
+      margin-top: 340px
   &__marker
     margin-right: 15px
     width: 15px

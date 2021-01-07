@@ -4,10 +4,15 @@
 .feature
   text-align: left
   margin-top: 20px
+  display: flex
+  +m
+    display: none
   img
     height: 9px
     width: 13px
     margin-right: 25px
+  &_active
+    display: flex
 .price-block
   width: 300px
   height: 740px
@@ -21,13 +26,21 @@
   align-items: center
   padding-top: 40px
   padding-bottom: 50px
+  transition: height 0.1s
+  +m
+    height: 400px
+    margin-bottom: 20px
+  &_active
+    height: 740px
   &:hover
     border-color: $primary-red
   &__title
     margin-top: 20px
   &__price
     margin-top: 40px
-    justify-self: end
+    +m
+      margin-top: 20px
+      margin-bottom: 20px
   &__button
     font-family: 'Regular'
     width: 160px

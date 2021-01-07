@@ -12,11 +12,30 @@
   grid-template-areas: 'st sb' 'ss sb'
   grid-row-gap: 20px
   padding: 60px 100px
+  +m
+    height: 360px
+    bottom: -180px
+    grid-template-areas: 'st' 'sb' 'ss'
+    justify-items: center
+    align-items: center
+  +s
+    height: 300px
+    bottom: -150px
+    padding: 20px 10px
+    grid-template-areas: 'st' 'sb'
+    grid-row-gap: 0px
   &__title
     grid-area: st
     width: 360px
+    +m
+      padding-left: 30px
+    +s
+      width: 290px
+      padding-left: 20px
   &__subtitle
     grid-area: ss
+    +s
+      display: none
   &__button
     grid-area: sb
     width: 250px
@@ -28,5 +47,9 @@
     align-self: center
     justify-self: end
     transition: box-shadow 0.2s
+    +m
+      justify-self: center
+    +s
+      margin-left: -10px
     &:hover
       box-shadow: 0px 5px 60px 0px $primary-red

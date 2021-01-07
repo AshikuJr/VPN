@@ -8,8 +8,8 @@ import instagram from './instagram.svg';
 
 const List = props => {
   return <ul className="list">
-    <li className="list__title">{props.title}</li>
-    {props.links.map(item => <li className="list__link"><a href={item.source}>{item.text}</a></li>)}
+    <li key='0' className="list__title">{props.title}</li>
+    {props.links.map((item, index) => <li key={index + 1} className="list__link"><a href={item.source}>{item.text}</a></li>)}
   </ul>
 }
 
@@ -23,7 +23,7 @@ const Footer = props => {
         <a href="ashikujr.github.io/resume/" target='_blank'><img src={twitter} alt="facebook"/></a>
         <a href="ashikujr.github.io/resume/" target='_blank'><img src={instagram} alt="facebook"/></a>
       </div>
-      <span>design — dribbble.com/didikurniawan<br/>layout — Mikhail Kozlov</span>
+      <span className='footer__brand__randomname'>design — dribbble.com/didikurniawan<br/>layout — Mikhail Kozlov</span>
     </div>
     <List title='Product' links={[
       {source: '#footer', text: 'Download'},

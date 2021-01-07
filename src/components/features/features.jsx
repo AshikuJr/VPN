@@ -14,14 +14,13 @@ const ListItem = ({text}) => {
 const Features = props => {
   return <div className="features" id='features'>
     <img src={pic} alt="another fancy guy" className="features__pic"/>
-    <div className="features__description">
       <h2 className="features__title">We Provide Many Features You Can Use</h2>
-      <p className="features__subtitle">You can explore the features that we provide with fun and have their own functions each feature.</p>
+      <div className="features__subtitle">You can explore the features that we provide with fun and have their own functions each feature.
       <ListItem text='Powerfull online protection.'/>
       <ListItem text='Internet without borders.'/>
       <ListItem text='Supercharged VPN'/>
       <ListItem text='No specific time limits.'/>
-    </div>
+      </div>
   </div>
 };
 

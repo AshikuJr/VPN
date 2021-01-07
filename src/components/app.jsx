@@ -28,7 +28,7 @@ const App = () => {
     <section className="second">
       <Container content={<Price/>}/>
       <Container content={<Network/>}/>
-      <Container content={<Testimonials/>}/>
+      <Testimonials/>
       <Container content={<Subscribe/>}/>
     </section>
     <section className="third">

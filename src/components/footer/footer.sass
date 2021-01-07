@@ -5,6 +5,8 @@
   width: 120px
   padding-left: 0
   list-style-type: none
+  +m
+    display: none
   &__title
     font-size: 18px
     font-family: 'Bold'
@@ -18,17 +20,38 @@
   padding-bottom: 50px
   display: flex
   justify-content: space-between
+  +s
+    padding-bottom: 20px
   &__brand
     margin-right: 200px
     width: 340px
     display: flex
     flex-direction: column
+    +m
+      width: 100%
+      margin-right: 0px
+      display: grid
+      grid-template-columns: 1fr 2fr
+      grid-template-rows: 1fr 1fr
+      align-items: center
+      padding-left: 30px
+    +s
+      grid-template-columns: 1fr
+      padding-left: 70px
+
+    &__randomname
+      +s
+        display: none
   &__title
     font-size: 20px
     display: flex
     align-items: center
   &__subtitle
     margin-top: 20px
+    +m
+      align-self: start
+    +s
+      display: none
   &__socials
     margin-top: 20px
     margin-bottom: 20px

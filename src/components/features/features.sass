@@ -3,6 +3,7 @@
 
 .list-item
   display: flex
+  margin-top: 20px
   img
     width: 20px
     height: 20px
@@ -10,17 +11,34 @@
 .features
   padding-top: 100px
   padding-bottom: 150px
-  display: flex
-  align-items: flex-end
-  justify-content: space-between
+  display: grid
+  grid-template-columns: 1fr 400px
+  grid-template-areas: 'fp ft' 'fp fs'
+  place-items: center
+  +m
+    padding-bottom: 100px
+    grid-template-columns: 1fr 1fr
+    grid-template-areas: 'ft ft' 'fp fs'
+  +s
+    padding-bottom: 50px
+    padding-top: 50px
+    grid-template-columns: 1fr
+    grid-template-areas: 'ft' 'fp' 'fs'
   &__pic
+    grid-area: fp
     width: 500px
     height: 400px
-  &__description
-    margin-left: 170px
-    height: 330px
-    display: flex
-    flex-direction: column
-    justify-content: space-between
+    +l
+      margin-left: -100px
+    +m
+      margin-left: -150px
+      width: 400px
+      height: 320px
+    +s
+      margin-top: -50px
   &__title
+    grid-area: ft
   &__subtitle
+    grid-area: fs
+    +s
+      margin-top: 20px
