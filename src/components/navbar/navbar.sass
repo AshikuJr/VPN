@@ -2,43 +2,72 @@
 @import 'src/settings/mixins'
 
 .navbar
-  display: flex
-  align-items: center
   justify-content: space-between
   min-height: 70px
+  display: grid
+  grid-template-areas: 'nb nm ns'
+  align-items: center
+  +l
+    grid-template-rows: 70px 1fr
+    grid-template-areas: 'nb ns nh' 'nm nm nm'
+  +s
+    grid-template-columns: 150px 1fr
+    grid-template-rows: 70px 3fr
+    grid-template-areas: 'nb nh' 'nm ns'
+
   &__logo
     width: 36px
     height: 36px
     margin-bottom: -10px
     margin-right: 5px
   &__brand
-    margin-right: 100px
-    margin-bottom: 5px
+    grid-area: nb
     font-family: 'Regular'
     font-size: 20px
     +l
-      margin-right: 250px
+      margin-right: 300px
     +m
-      margin-right: 50px
-    +s
       margin-right: 0px
+  &__menu
+    max-width: 400px
+    grid-area: nm
+    display: flex
+    justify-content: space-between
+    align-items: center
+    +l
+      display: none
+    +s
+      margin-top: 20px
+      flex-direction: column
+      align-items: start
+    &_active
+      display: flex
+
   &__link
-    margin-left: 3%
+    margin: 10px
     font-size: 1em
     transition: color 0.2s
     display: inline-block
-    +l
-      display: none
     &:hover
       color: $primary-red
+  &__signing
+    grid-area: ns
+    display: flex
+    justify-content: space-between
+    align-items: center
+    +s
+      flex-direction: column-reverse
+      align-self: start
+      margin-left: -30px
+      margin-top: 20px
+      display: none
+    &_active
+      display: flex
   &__signIn
-    margin-left: 10%
     min-width: 60px
     font-family: 'Regular'
-    +m
-      margin-left: 90px
     +s
-      display: none
+      margin-left: 30px
   &__signUp
     margin-left: 20px
     font-family: 'Regular'
@@ -48,21 +77,23 @@
     border: 1px solid $primary-red
     border-radius: 50px
     +s
-      display: none
+      margin-bottom: 10px
     &:hover
       transition: 0.5s
       background-color: $primary-red
       color: white
   &__hamburger
-    position: relative
     display: none
+    grid-area: nh
+    position: relative
     height: 40px
     width: 40px
     margin-top: 5px
-    margin-left: 20px
     +l
-      display: inline-block
+      display: block
+      justify-self: end
     +s
+      margin-right: 30px
       margin-top: 0px
     span
       position: absolute
@@ -89,10 +120,3 @@
           transform: scale(0)
         &:nth-child(3)
           transform: translateY(-15px) rotate(-45deg) scaleY(0.7)
-  &__dropdown
-    display: none
-    align-items: center
-    justify-content: space-between
-    min-height: 70px
-    &_active
-      display: flex
