@@ -19,9 +19,9 @@ const Footer = props => {
       <span className='footer__title'><img src={logo} alt="logo" style={{marginRight: 5, paddingBottom: 5}} id='footer'/>Lasles<span style={{fontFamily : 'Bold'}}>VPN</span></span>
       <p className="footer__subtitle"><span style={{fontFamily: 'Regular'}}>LaslesVPN</span> is a private virtual network that has unique features and has high security.</p>
       <div className="footer__socials">
-        <a href="ashikujr.github.io/resume/" target='_blank'><img src={facebook} alt="facebook"/></a>
-        <a href="ashikujr.github.io/resume/" target='_blank'><img src={twitter} alt="facebook"/></a>
-        <a href="ashikujr.github.io/resume/" target='_blank'><img src={instagram} alt="facebook"/></a>
+        <a href="https://ashikujr.github.io/resume/dist/index.html" target='_blank'><img src={facebook} alt="facebook"/></a>
+        <a href="https://ashikujr.github.io/resume/dist/index.html" target='_blank'><img src={twitter} alt="facebook"/></a>
+        <a href="https://ashikujr.github.io/resume/dist/index.html" target='_blank'><img src={instagram} alt="facebook"/></a>
       </div>
       <span className='footer__brand__randomname'>design — dribbble.com/didikurniawan<br/>layout — Mikhail Kozlov</span>
     </div>
